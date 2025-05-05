@@ -1,0 +1,326 @@
+#head{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 20px;
+     background-color: rgb(217, 177, 254); color: rgb(7, 5, 23); text-align: center;
+
+}
+
+a{
+    color: rgb(51, 77, 61);
+    text-decoration: none;
+    font-size: larger;
+}
+
+#cg{
+    font-size: 32px; 
+    text-align: left;
+    font-family:  'Playfair Display', serif;
+}
+.navbar {
+    background-color: #f3b7c9;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content:right;
+}
+.nav-links li {
+    margin: 0 15px;
+}
+.nav-links a {
+    color: rgb(78, 45, 109);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+.nav-links a:hover {
+    color: #ffdd57;
+}
+#toph {
+    text-align: center;
+    align-items: center;
+    padding: 10px;
+    transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover Effect */
+#toph:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    color: #ffdd57; /* Changes text color to a goldish hue */
+    background-color: #d1caff; /* Dark background on hover */
+}
+
+
+#lowh {
+    text-align: center; /* Centers the h1 text */
+    padding: 10px; /* Adds padding around the text area */
+}
+
+#lowh h1 {
+    background-color: rgb(255, 232, 202); /* Background color applied only to the h1 */
+    display: inline-block; /* Makes the background wrap around the text */
+    margin: 0; /* Removes default margin for better alignment */
+    padding: 10px; /* Adds padding inside the h1 */
+}
+.join{
+    width: 600px;
+    align-items: center;
+    justify-content: center;
+    display: inline-block;
+    text-align: center;
+}
+  
+/* Initial state of the container */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    margin: 20px;
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Apply transition for transform and opacity */
+}
+
+/* Apply transition effect on hover or any other condition */
+.container:hover {
+    transform: scale(1.05); /* Slight scale effect */
+    opacity: 0.9; /* Slight fade effect */
+}
+
+/* Flexbox boxes inside the container */
+.box {
+    flex: 1;
+    margin: 0 10px;
+    height: 200px;
+    width: 250px;
+    background-color: rgb(255, 232, 202);
+    color: rgb(59, 22, 22);
+    font-style: bold;
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for box effects */
+}
+
+/* Add hover effect to each box */
+.container .box:hover {
+    transform: translateY(-5px); /* Slightly lift the box */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Make shadow more pronounced */
+}
+
+
+.box {
+    flex: 1; /* Each box will grow equally */
+    margin: 0 10px; /* Margin between boxes */
+    height: 200px; /* Fixed height for uniformity */
+    width: 250px;
+    background-color: rgb(255, 232, 202); /* A nice green color for visibility */
+    color: rgb(59, 22, 22); /* White text for contrast */
+    font-style: bold;
+    font-size: large;
+    display: flex; /* Flexbox for inner alignment */
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+    text-align: center; /* Center the text in the box */
+    border-radius: 20px; /* Rounded corners for aesthetics */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* A little shadow for depth */
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+
+.calc {
+    
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+    border: 3px solid rgb(0, 0, 0); /* Border with green color */;
+}
+.input-group {
+    margin-bottom: 18px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: border 0.3s;
+    background-color: #f9f9f9; /* Light gray background for input */
+}
+
+input:focus, select:focus {
+    outline: none;
+    border: 1px solid rgb(78, 45, 109); /* Green border when focused */
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    background-color: rgb(109, 45, 45); /* Green color for button */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+button:active {
+    background-color: #388e3c; /* Even darker green when clicked */
+}
+
+.results {
+    margin-top: 20px;
+    background-color: #f1f1f1; /* Light gray background for results */
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    display: none;
+}
+
+h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    color: #444;
+    margin: 5px 0;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+}
+.dietplanner {
+    width: 60%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    background: linear-gradient(145deg, #fea6a6, #e4de84d6); /* Soft gradient from light pink to a stronger pink */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for zoom and shadow */
+    border: 5px solid rgba(0, 0, 0, 0.3);
+}
+
+
+.dietplanner h2 {
+    color: #670505;; 
+}
+
+
+
+.dietplanner select {
+    color: #333; 
+}
+
+
+/* Hover effect: Strong zoom and shadow */
+.dietplanner:hover {
+    transform: scale(1.05); /* Zoom in effect */
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+/* Focus effect: Adds a subtle zoom and deeper shadow when the div is focused */
+.dietplanner:focus-within {
+    transform: scale(1.05); /* Slight zoom when focused */
+    box-shadow: 0 12px 60px rgba(0, 0, 0, 0.4); /* Deeper shadow */
+}
+
+/* Active effect: Slight press down effect with shadow */
+.dietplanner:active {
+    transform: scale(1.02); /* Slight reduction in scale when clicked */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Softer shadow during active state */
+}
+
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #333;
+}
+
+
+p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+.meal-selection {
+    margin-bottom: 30px;
+}
+
+label {
+    font-size: 1.2em;
+    display: block;
+    margin-top: 10px;
+    color: #000000;
+}
+
+select {
+    font-size: 1em;
+    padding: 5px;
+    margin: 10px 0;
+    width: 100%;
+}
+
+
+.caloriecnt {
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+#totalCalories {
+    font-size: 2em;
+    font-weight: bold;
+    color: #761919;
+}
+center{
+    background-size: cover;
+
+}

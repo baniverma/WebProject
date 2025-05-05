@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: url('https://www.midwestliving.com/thmb/Hz-cq9YoLL47MhhuuIYum5PRM7k=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/CD_39581_hot-chocolate-588c7bcc4c5246c8b3572546ea373b3b.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+  }
+  
+  header {
+    text-align: center;
+    padding: 60px 20px 20px;
+    background: rgba(0, 0, 0, 0.7);
+  }
+  
+  header h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+  }
+  
+  #searchInput {
+    padding: 12px 20px;
+    width: 280px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  
+  .back-link {
+    color: #945034;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    margin-top: 10px;
+  }
+  
+  #resultArea {
+    padding: 30px 20px;
+    text-align: center;
+  }
+  
+  .drink-details {
+    background: rgba(255, 255, 255, 0.88);
+    color: #333;
+    padding: 25px;
+    margin: 0 auto;
+    border-radius: 12px;
+    max-width: 400px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+  }
+  
+  .drink-details h2 {
+    margin-bottom: 10px;
+  }
+  
+  .drink-details p {
+    margin: 6px 0;
+    font-size: 16px;
+  }
+  
+  .hint {
+    font-size: 18px;
+    opacity: 0.8;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    font-size: 14px;
+    margin-top: 30px;
+  }
+
+  #cart {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  #checkoutButton {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background: #945034;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  #checkoutButton:hover {
+    background: #7a3e2b;
+  }
+  
+  #orderSummaryBox {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+    z-index: 1000;
+  }
+  
+  #orderSummaryContent {
+    margin-bottom: 20px;
+  }
+  
+  #closeOrderSummary {
+    padding: 10px 20px;
+    background: #945034;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  #closeOrderSummary:hover {
+    background: #7a3e2b;
+  }
+

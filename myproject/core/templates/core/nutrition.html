@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet Plan</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style3b.css' %}">
+</head>
+<body>
+
+    <div id="bg"></div>
+
+    <header>
+        <div id="head">OUR RECIPES, YOUR INBOX.</div><br>
+        <nav class="navbar">
+            <h1 id="cg"><i>CEREAL GRILLERS</i></h1>
+            <ul class="nav-links">
+                <li><a href="{% url 'index' %}">HOME</a></li>
+                <li><a href="{% url 'nutrition' %}">NUTRITION</a></li>
+                <li><a href="{% url 'review' %}">REVIEWS</a></li>
+                <li><a href="{% url 'register' %}">SIGN UP</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <div id="toph"><h1 style="color: rgb(78, 45, 109);">Custom Diet Plans For Your Needs</h1></div>
+        <div id="lowh"><h1 style="color: maroon;"><i>Personalize your meal plan to meet your nutrition needs</i></h1></div>
+    </section>
+
+    <section class="container">
+        <div class="box">
+            <strong>Acceptable Macronutrient Distribution Ranges</strong><br>
+            These ranges were developed to minimize chronic disease risk while preventing deficiencies.
+        </div>
+        <div class="box">
+            <strong>Nutritional Targets</strong><br>
+            Edit calories, protein, carbs, and more as per your goals.
+        </div>
+        <div class="box">
+            <strong>Dietary Needs</strong><br>
+            Vegan? Gluten-Free? Customize your meals based on restrictions and health needs.
+        </div>
+    </section>
+    <centre>
+
+    <section class="calc-section" style="background-image: url('https://www.shutterstock.com/image-photo/food-background-spices-herbs-utensil-600nw-2255294345.jpg'); padding: 40px; text-align: center;">
+        <div class="calc">
+            <h1>Macronutrient Calculator</h1>
+            <form id="macronutrientForm">
+                <div class="input-group">
+                    <label for="age">Age (years):</label>
+                    <input type="number" id="age" required>
+                </div>
+                <div class="input-group">
+                    <label for="weight">Weight (kg):</label>
+                    <input type="number" id="weight" required>
+                </div>
+                <div class="input-group">
+                    <label for="height">Height (cm):</label>
+                    <input type="number" id="height" required>
+                </div>
+                <div class="input-group">
+                    <label for="gender">Gender:</label>
+                    <select id="gender" required>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="activity">Activity Level:</label>
+                    <select id="activity" required>
+                        <option value="1.2">Sedentary</option>
+                        <option value="1.375">Lightly active</option>
+                        <option value="1.55">Moderately active</option>
+                        <option value="1.725">Very active</option>
+                        <option value="1.9">Super active</option>
+                    </select>
+                </div>
+                <button type="submit">Calculate</button>
+            </form>
+        </centre>
+
+            <div id="results" class="results" style="display:none;">
+                <h3>Macronutrient Breakdown:</h3>
+                <p id="caloriesResult"></p>
+                <p id="carbResult"></p>
+                <p id="proteinResult"></p>
+                <p id="fatResult"></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="dietplanner">
+        <header>
+            <h1 style="color: #761919;">Diet Planner</h1>
+            <p style="color:rgb(65, 37, 44)">Plan your meals and track your calories!</p>
+        </header>
+
+        <div class="meal-selection">
+            <h2 style="color: rgb(78, 45, 109);">Select Your Meals</h2>
+            <form id="mealForm">
+                <label for="breakfast">Breakfast:</label>
+                <select id="breakfast">
+                    <option value="100">Oatmeal (100 kcal)</option>
+                    <option value="150">Scrambled Eggs (150 kcal)</option>
+                    <option value="200">Pancakes (200 kcal)</option>
+                    <option value="108">Egg and Cheese Sandwich (108 kcal)</option>
+                    <option value="200">Yogurt bowl (200 kcal)</option>
+                    <option value="158">French Toast (158 kcal)</option>
+                </select><br>
+
+                <label for="lunch">Lunch:</label>
+                <select id="lunch">
+                    <option value="300">Chicken Salad (300 kcal)</option>
+                    <option value="400">Pasta (400 kcal)</option>
+                    <option value="500">Burger (500 kcal)</option>
+                    <option value="265">Veggie wrap (265 kcal)</option>
+                    <option value="540">Caprese Sandwich (540 kcal)</option>
+                    <option value="260">Avocado Toast (260 kcal)</option>
+                </select><br>
+
+                <label for="dinner">Dinner:</label>
+                <select id="dinner">
+                    <option value="350">Grilled Fish (350 kcal)</option>
+                    <option value="400">Steak (400 kcal)</option>
+                    <option value="250">Veggie Stir Fry (250 kcal)</option>
+                    <option value="167">Chickpea Salad (167 kcal)</option>
+                    <option value="380">Aglio e olio (380 kcal)</option>
+                    <option value="220">Noodle Soup (220 kcal)</option>
+                </select><br>
+
+                <button type="button" onclick="calculateCalories()">Calculate Total Calories</button>
+            </form>
+        </div>
+
+        <div class="caloriecnt">
+            <h2>Your Total Calories:</h2>
+            <p id="totalCalories">0 kcal</p>
+        </div>
+    </section>
+
+    <section>
+        <div id="toph"><h1 style="color: indigo;">Save Time & Eat Better</h1></div>
+    </section>
+
+    <footer style="background-color: #343a40; color: white; padding: 20px; text-align: center;">
+        <h2 style="color: rgb(255, 200, 200)">Contact Us</h2>
+        <p>Email: <a href="mailto:info@example.com" style="color: #007bff;">info@example.com</a></p>
+        <p>Phone: <a href="tel:+1234567890" style="color: #007bff;">+1 (234) 567-890</a></p>
+        <p>Address: 123 Main Street, City, Country</p>
+        <h2>Follow Us</h2>
+        <a href="https://www.facebook.com/" target="_blank" style="color: #007bff;">Facebook</a> |
+        <a href="https://www.twitter.com/" target="_blank" style="color: #007bff;">Twitter</a> |
+        <a href="https://www.instagram.com/" target="_blank" style="color: #007bff;">Instagram</a>
+        <p style="margin-top: 10px;">© 2024 Your Company Name. All Rights Reserved.</p>
+        <p style="font-style: italic; color: rgb(255, 168, 168);">Thank you for visiting!</p>
+    </footer>
+
+    <script>
+        // Macronutrient Calculator
+        document.getElementById("macronutrientForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+            const age = parseInt(document.getElementById("age").value);
+            const weight = parseFloat(document.getElementById("weight").value);
+            const height = parseFloat(document.getElementById("height").value);
+            const gender = document.getElementById("gender").value;
+            const activity = parseFloat(document.getElementById("activity").value);
+
+            let bmr;
+            if (gender === "male") {
+                bmr = 10 * weight + 6.25 * height - 5 * age + 5;
+            } else {
+                bmr = 10 * weight + 6.25 * height - 5 * age - 161;
+            }
+
+            const calories = bmr * activity;
+            const protein = weight * 2; // 2g per kg
+            const fat = (0.25 * calories) / 9;
+            const carbs = (calories - (protein * 4 + fat * 9)) / 4;
+
+            document.getElementById("caloriesResult").innerText = `Calories: ${calories.toFixed(0)} kcal/day`;
+            document.getElementById("proteinResult").innerText = `Protein: ${protein.toFixed(0)} g`;
+document.getElementById("fatResult").innerText = `Fat: ${fat.toFixed(0)} g`;
+document.getElementById("carbResult").innerText = `Carbohydrates: ${carbs.toFixed(0)} g`;
+document.getElementById("results").style.display = "block";});
+
+        // Meal Plan Calorie Calculator
+        function calculateCalories() {
+            const breakfast = parseInt(document.getElementById("breakfast").value);
+            const lunch = parseInt(document.getElementById("lunch").value);
+            const dinner = parseInt(document.getElementById("dinner").value);
+
+            const total = breakfast + lunch + dinner;
+            document.getElementById("totalCalories").innerText = `${total} kcal`;
+
+        }
+    </script>
+   
+</body>
+</html>
+
+

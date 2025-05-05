@@ -1,0 +1,212 @@
+#head{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 20px;
+     background-color: rgb(201, 143, 255); color: rgb(7, 5, 23); text-align: center;
+
+}
+a{
+    color: rgb(51, 77, 61);
+    text-decoration: none;
+    font-size: larger;
+}
+
+h1{
+    font-size: 32px; 
+    text-align: left;
+    font-family:  'Playfair Display', serif;
+}
+
+
+#box1{
+    padding: 10px;
+    height: 420px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#bgimg{
+    background-image: url(https://media.istockphoto.com/photos/culinary-background-with-traditional-ingredients-of-italian-cuisine-picture-id1339192835?k=20&m=1339192835&s=170667a&w=0&h=pemKreRdv8nJq3YXigb3FNiiKyhfNSIyVpqWraiYRqw=);
+    background-size: cover;
+}
+
+
+#box3{
+    height: 420px;
+    width: 300px;
+    color:aliceblue;
+    background-color: #371f48;
+    margin: 20px;
+    padding: 20px;
+}
+
+
+#sub{
+    color: #502b6b;
+    font-size:xx-large;
+    font-family:Lucida Handwriting
+}
+.navbar {
+    background-color: #ffb2c9;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content:right;
+}
+.nav-links li {
+    margin: 0 15px;
+}
+.nav-links a {
+    color: rgb(78, 45, 109);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+.nav-links a:hover {
+    color: #ffdd57;
+}
+h2{
+     font-family: 'Times New Roman', Times, serif; 
+}
+
+.container {
+    display: flex;
+    justify-content: center; 
+    align-items: flex-end; 
+}
+.item {
+    margin: 10px; 
+    text-align: center; 
+}
+.style img{
+    max-width: 300px; 
+    height: auto; 
+}
+.style1 img{
+    text-align: center; height:400px; width:300px
+}
+.style2 img{
+    max-width: 200px;
+    height:auto
+
+}
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
+    justify-content: center; /* Centers items horizontally */
+    gap: 20px; /* Adds space between items */
+    padding: 20px; /* Adds padding around the container */
+}
+.item {
+    flex: 1 1 200px; /* Allows items to grow and shrink */
+    text-align: center; /* Centers text under images */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
+    border-radius: 8px; /* Optional: rounds the corners of items */
+    overflow: hidden; /* Ensures children are contained */
+}
+.item img {
+    max-width: 100%; /* Ensures images are responsive */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 8px; /* Rounds the corners of images */
+}
+.horizontal:hover {
+    transform: scale(1.05); /* Scales the item up on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+
+}
+
+#categories{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#categories span {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px; 
+    color: black;
+}
+
+
+.round{
+    width:120px;
+    height:120px;
+    border-radius: 50%;
+    border: 2px solid black
+}
+
+li{
+   list-style-type: none;
+   margin: 10px;
+}
+
+.search-container {
+    background: rgb(0, 0, 0);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+}
+
+.search-input {
+    width: 250px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+}
+
+.search-input:focus {
+    border-color: #007BFF;
+}
+
+.search-button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #502b6b;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.search-button:hover {
+    background-color: #0056b3;
+}
+
+#recent{
+    background-color: rgb(85, 16, 16);
+    height:40px;
+    width:350px;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.clips{
+  display: flex;
+  flex-direction: row ;
+  justify-content: space-around;
+  margin: 80px;
+}
+
+#bwtext{
+    text-align: center;
+    margin-left: 30px;
+    margin-right: 30px;
+    color: #502b6b;
+    background-color: rgb(197, 218, 255);
+}
+
+.latesttext{
+    color:#502b6b;
+    background-color: #fff0d4;
+    padding: 20px;
+    border: 2px solid rgb(181, 117, 20);
+}

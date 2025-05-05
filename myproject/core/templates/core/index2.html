@@ -1,0 +1,150 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>McCafé Drink Menu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+
+<header>
+  <h1>McCafé</h1>
+  <p>Your Cozy Coffee, Cocktail & Mocktail Corner</p>
+  <a href="/calories" class="calories-btn">Check Drink Calories</a>
+</header>
+
+<section class="menu-section">
+  <h2>Coffee</h2>
+  <div class="drink-row" id="coffee-section">
+    <div class="drink-card" data-name="Cappuccino" data-price="3.50">
+      <h3>Cappuccino</h3>
+      <p class="price">$3.50</p>
+      <p class="ingredients">Espresso, Steamed Milk, Foam</p>
+    </div>
+    <div class="drink-card" data-name="Caramel Latte" data-price="4.20">
+      <h3>Caramel Latte</h3>
+      <p class="price">$4.20</p>
+      <p class="ingredients">Espresso, Milk, Caramel Syrup</p>
+    </div>
+    <div class="drink-card" data-name="Mocha" data-price="4.80">
+      <h3>Mocha</h3>
+      <p class="price">$4.80</p>
+      <p class="ingredients">Espresso, Chocolate, Milk</p>
+    </div>
+    <div class="drink-card" data-name="Flat White" data-price="3.80">
+      <h3>Flat White</h3>
+      <p class="price">$3.80</p>
+      <p class="ingredients">Espresso, Steamed Milk</p>
+    </div>
+    <div class="drink-card" data-name="Iced Latte" data-price="4.30">
+      <h3>Iced Latte</h3>
+      <p class="price">$4.30</p>
+      <p class="ingredients">Espresso, Cold Milk, Ice</p>
+    </div>
+  </div>
+</section>
+
+<section class="menu-section">
+  <h2>Cocktails</h2>
+  <div class="drink-row" id="cocktail-section">
+    <div class="drink-card" data-name="Margarita" data-price="6.00">
+      <h3>Margarita</h3>
+      <p class="price">$6.00</p>
+      <p class="ingredients">Tequila, Lime, Triple Sec</p>
+    </div>
+    <div class="drink-card" data-name="Negroni" data-price="7.00">
+      <h3>Negroni</h3>
+      <p class="price">$7.00</p>
+      <p class="ingredients">Gin, Campari, Sweet Vermouth</p>
+    </div>
+    <div class="drink-card" data-name="Mojito" data-price="6.50">
+      <h3>Mojito</h3>
+      <p class="price">$6.50</p>
+      <p class="ingredients">Rum, Mint, Lime, Soda</p>
+    </div>
+    <div class="drink-card" data-name="Old Fashioned" data-price="7.50">
+      <h3>Old Fashioned</h3>
+      <p class="price">$7.50</p>
+      <p class="ingredients">Whiskey, Bitters, Sugar</p>
+    </div>
+    <div class="drink-card" data-name="Cosmopolitan" data-price="7.00">
+      <h3>Cosmopolitan</h3>
+      <p class="price">$7.00</p>
+      <p class="ingredients">Vodka, Cranberry, Lime</p>
+    </div>
+    <div class="drink-card" data-name="Pina Colada" data-price="7.50">
+      <h3>Pina Colada</h3>
+      <p class="price">$7.50</p>
+      <p class="ingredients">Rum, Pineapple, Coconut</p>
+    </div>
+    <div class="drink-card" data-name="Daiquiri" data-price="6.00">
+      <h3>Daiquiri</h3>
+      <p class="price">$6.00</p>
+      <p class="ingredients">Rum, Lime, Sugar</p>
+    </div>
+  </div>
+</section>
+
+<section class="menu-section">
+  <h2>Mocktails</h2>
+  <div class="drink-row" id="mocktail-section">
+    <div class="drink-card" data-name="Virgin Mojito" data-price="4.00">
+      <h3>Virgin Mojito</h3>
+      <p class="price">$4.00</p>
+      <p class="ingredients">Mint, Lime, Soda, Sugar</p>
+    </div>
+    <div class="drink-card" data-name="Sunset Cooler" data-price="4.50">
+      <h3>Sunset Cooler</h3>
+      <p class="price">$4.50</p>
+      <p class="ingredients">Orange, Cranberry, Lemon</p>
+    </div>
+    <div class="drink-card" data-name="Berry Fizz" data-price="5.00">
+      <h3>Berry Fizz</h3>
+      <p class="price">$5.00</p>
+      <p class="ingredients">Berries, Soda, Mint</p>
+    </div>
+    <div class="drink-card" data-name="Pineapple Punch" data-price="4.80">
+      <h3>Pineapple Punch</h3>
+      <p class="price">$4.80</p>
+      <p class="ingredients">Pineapple, Mint, Ginger Ale</p>
+    </div>
+    <div class="drink-card" data-name="Tropical Breeze" data-price="5.20">
+      <h3>Tropical Breeze</h3>
+      <p class="price">$5.20</p>
+      <p class="ingredients">Mango, Coconut, Lime</p>
+    </div>
+    <div class="drink-card" data-name="Lemonade Spritz" data-price="4.50">
+      <h3>Lemonade Spritz</h3>
+      <p class="price">$4.50</p>
+      <p class="ingredients">Lemon, Soda, Mint</p>
+    </div>
+    <div class="drink-card" data-name="Cucumber Cooler" data-price="4.80">
+      <h3>Cucumber Cooler</h3>
+      <p class="price">$4.80</p>
+      <p class="ingredients">Cucumber, Lime, Soda</p>
+    </div>
+  </div>
+</section>
+
+<section class="menu-section">
+  <h2>Your Cart</h2>
+  <div id="cart">
+    <p>Your cart is empty.</p>
+  </div>
+  <button id="checkoutButton">Checkout</button>
+  <div id="orderSummaryBox">
+    <button id="closeOrderSummary">Close</button>
+    <pre id="orderSummaryContent"></pre>
+  </div>
+</section>
+
+<footer>
+  &copy; 2025 McCafé. All rights reserved.
+</footer>
+
+<script src="script2.js"></script>
+</body>
+</html>

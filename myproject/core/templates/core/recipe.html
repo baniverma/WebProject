@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% if page == 'add' %}
+            Add Recipe
+        {% elif page == 'update' %}
+            Update Recipe
+        {% else %}
+            Recipe Finder
+        {% endif %}
+    </title>
+    <link rel="stylesheet" href="{% static 'css/style2r.css' %}">
+</head>
+<body>
+
+    {% if page == 'add' %}
+        <h1>Add a New Recipe</h1>
+        <div class="container">
+            <form action="{% url 'recipe' %}" method="POST">
+                {% csrf_token %}
+                <label for="name">Recipe Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="ingredients">Ingredients:</label>
+                <textarea id="ingredients" name="ingredients" rows="4" required></textarea>
+
+                <label for="instructions">Instructions:</label>
+                <textarea id="instructions" name="instructions" rows="4" required></textarea>
+
+                <button type="submit" class="btn">Add Recipe</button>
+            </form>
+        </div>
+
+    {% elif page == 'update' %}
+        <h1>Update Recipe</h1>
+        <div class="container">
+            <form action="{% url 'update_recipe' recipe.id %}" method="POST">
+                {% csrf_token %}
+                <label for="name">Recipe Name:</label>
+                <input type="text" id="name" name="name" value="{{ recipe.name }}" required>
+
+                <label for="ingredients">Ingredients:</label>
+                <textarea id="ingredients" name="ingredients" rows="4" required>{{ recipe.ingredients }}</textarea>
+
+                <label for="instructions">Instructions:</label>
+                <textarea id="instructions" name="instructions" rows="4" required>{{ recipe.instructions }}</textarea>
+
+                <button type="submit" class="btn">Update Recipe</button>
+            </form>
+        </div>
+
+    {% else %}
+        <h1>Recipe Finder</h1>
+        <div class="container">
+            <a href="{% url 'recipe' %}" class="btn">Add New Recipe</a>
+            {% for recipe in recipes %}
+                <div class="recipe">
+                    <h2>{{ recipe.name }}</h2>
+                    <p><strong>Ingredients:</strong> {{ recipe.ingredients }}</p>
+                    <p><strong>Instructions:</strong> {{ recipe.instructions }}</p>
+                    <div class="actions">
+                        <a href="{% url 'update_recipe' recipe.id %}" class="btn btn-edit">Edit</a>
+                        <a href="{% url 'delete_recipe' recipe.id %}" class="btn btn-delete" onclick="return confirm('Are you sure you want to delete this recipe?');">Delete</a>
+                    </div>
+                </div>
+            {% empty %}
+                <p>No recipes found.</p>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+</body>
+</html>

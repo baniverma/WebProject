@@ -1,0 +1,172 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe1</title>
+
+    <!-- Static CSS file -->
+    <link rel="stylesheet" href="{% static 'css/style2b.css' %}">
+</head>
+<body>
+
+    <div id="bg"></div>
+    <div id="head">OUR RECIPES, YOUR INBOX.</div><br>
+
+    <nav class="navbar">
+        <h1><i>PINCH OF YUM</i></h1>
+        <ul class="nav-links" style="text-align: right;">
+            <li><a href="{% url 'index' %}">HOME</a></li>
+            <li><a href="{% url 'nutrition' %}">NUTRITION</a></li>
+            <li><a href="{% url 'review' %}">REVIEWS</a></li>
+            <li><a href="{% url 'register' %}">SIGN UP</a></li>
+            <li><a href="{% url 'recipe' %}">ADD RECIPE</a></li>
+            <li><a href="{% url 'index2' %}">DRINKS</a></li>
+
+        </ul>
+    </nav>
+
+    <div id="bgimg">
+        <div class="clips">
+            <div id="box1">
+                <center>
+                    <h1 style="font-family: Lucida Handwriting;">A Recipe</h1>
+                    <i style="font-family: Lucida Handwriting; font-size: 40px;">Is A Story <br>That Ends With A</i>
+                    <h1 style="color: indigo;">GOOD MEAL</h1>
+                </center>
+            </div>
+
+            <div>
+                <p id="bwtext">
+                    <center>
+                        <h2>SIMPLE RECIPES MADE FOR<br><i id="sub">real, actual, everyday life</i></h2>
+                    </center>
+                    <div class="item style1">
+                        <img src="https://westminstercheddar.com/wp-content/uploads/2016/02/cheese-stuffed-chicken-recipe.jpg" alt="Quick & Easy">
+                        <h3>QUICK & EASY</h3>
+                    </div>
+                </p>
+            </div>
+
+            <div id="box3">
+                <p>
+                    Wondering what to cook with what you have at home?<br>
+                    <b>CEREAL GRILLERS</b> will recommend meals based on what you already have—no extra shopping needed!<br><br>
+                    Our goal is to inspire you with food that is approachable and exciting—whether cooking for yourself, family, roommates, or friends.<br>
+                    We want you to be excited to cook every evening!
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <a href="" class="item style horizontal">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTh0zj5jWM4qNJ-JJmStkvYLoptwW4cAtxVlQ&s" height="300" width="300" alt="Dinner">
+            <p1>Dinner</p1>
+        </a>
+        <a href="bowls.html" class="item style2 horizontal">
+            <img src="https://pinchofyum.com/wp-content/uploads/Chipotle-Tahini-Bowls-with-Egg-Square.jpg" height="300px" width="300px" >
+            <p1>Bowls</p1>
+            </a>
+            <a href="sos.html" class="item style horizontal">
+            <img src="https://www.healthyseasonalrecipes.com/wp-content/uploads/2023/01/whole-wheat-yeast-waffles-sq-002-700x700.jpg" height="300px" width="300px">
+            <p1>SOS series</p1>
+            </a>
+            <a href="fall.html" class="item style horizontal">
+            <img src="https://th.bing.com/th/id/OIP.khbwvR5qqoce-PzHn5-WBQHaHa?rs=1&pid=ImgDetMain" height="300px" width="300px">
+            <p1>Fall</p1>
+    </div>
+
+    <!-- Categories Section -->
+    <ul id="categories">
+        <li>
+            <a href="">
+                <
+                    <li> <a href="salad.html"> <img  class="round" src="https://www.foodandwine.com/thmb/IuZPWAXBp4YaT9hn1YLHhuijT3k=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/FAW-recipes-big-italian-salad-hero-83e6ea846722478f8feb1eea33158b00.jpg"><span> SALADS</span> </li>
+                    <li> <a href="soups.html"> <img  class="round" src="https://cdn.apartmenttherapy.info/image/fetch/f_auto,q_auto:eco/https://storage.googleapis.com/gen-atmedia/3/2018/10/1574959dca3fc2e4eac7eaa242745c495a0e82c9.jpeg" alt="soup"> <span> SOUP</span> </li>
+                    <li> <a href="vegan.html"> <img  class="round" src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/rainbow-colored-fruit-and-vegetable-lunch-bowl-royalty-free-image-1572980712.jpg?resize=980:*" alt="vegan" ><span> VEGAN </span>  </li>
+                    <li> <a href="instant.html"> <img  class="round" src="https://ohsweetbasil.com/wp-content/uploads/quick-and-easy-instant-pot-chili-or-slow-cooker-chili-best-chili-recipe-ohsweetbasil.com-6.jpg" alt="instant pot" > <span> INSTANT POT</span> </li>
+                    <li> <a href="dinner2.html"> <img  class="round" src="https://dehayf5mhw1h7.cloudfront.net/wp-content/uploads/sites/1072/2019/11/08093909/turkey-dinner-costing-new-yorkers-22-percent-more-this-year.jpg" alt="dinner" > <span> DINNER </span> </li>
+                    <li> <a href="quick&easy.html"> <img  class="round" src="https://th.bing.com/th/id/OIP.Fd0_KVUtdfGIwwrVP7IXvgHaF7?w=1000&h=800&rs=1&pid=ImgDetMain" alt="protein rich" > <span> PROTEIN RICH </span> </li>
+                    <li> <a href="sos.html"> <img  class="round" src="https://th.bing.com/th/id/OIP.cAyEA1EmbGJgD9iUTpTgFwAAAA?rs=1&pid=ImgDetMain" alt="quick and easy" > <span> QUICK & EASY </span> </li>
+                    <li> <a href="veg.html"> <img  class="round" src="https://th.bing.com/th/id/R.411c791168c5c134e7264b4ca65662a3?rik=QvRtlQu%2bT%2flpvg&riu=http%3a%2f%2fwww.healthista.com%2fwp-content%2fuploads%2f2015%2f09%2fTofu-and-Wild-Rice-5-foods-for-vegetarians-by-healthista.com_-1024x724.jpg&ehk=QA9KrQ%2fazAcG7MHes00t8bOMZs3vneVml8sAx5LWuyg%3d&risl=&pid=ImgRaw&r=0" alt="vegetarian " > <span> VEGETARIAN </span> </li>
+                    <li> <a href="healthy.html"> <img  class="round" src="https://cdn.cancercenter.com/-/media/ctca/images/others/blogs/2019/06-june/02-blog-healthy-food-l.jpg" alt="healthy" > <span> HEALTHY </span>  </li>
+            </a>
+        </li>
+    </ul>
+
+    <div class="search-container">
+        <form action="#" method="GET">
+            <input type="text" class="search-input" placeholder="Search For Our Recipes...">
+            <button type="submit" class="search-button">Search</button>
+        </form>
+    </div>
+
+    <hr><br><br><br>
+
+    <h3 style="color: rgb(78, 33, 100);"><b>THE LATEST AND GREATEST</b></h3>
+    <div style="display: flex; align-items: center;">
+        <img src="https://th.bing.com/th/id/OIP.LIfkxI8uAIJaizDxQThiaAHaLG?rs=1&pid=ImgDetMain" width="300" height="300" alt="Beef Skewers">
+        <div class="latesttext" style="margin-left: 20px;">
+            <h1><i>Garlic and Black Pepper Beef Skewers</i></h1>
+            <p>
+                These beef skewers are packed with flavor! Thinly sliced strips of steak, browned and caramelized to juicy perfection.<br>
+                <h3><a href="">Continue Reading</a></h3>
+            </p>
+        </div>
+    </div><br><br>
+    <div style="display: flex; align-items: center;">
+        <img src="https://www.howsweeteats.com/wp-content/uploads/2023/01/ricotta-meatballs-7.jpg" width="300px" height="300px" alt="Garlic and Black Pepper Beef Skewers">
+        <div class="latesttext" style="margin-left: 20px;">
+            <p style="color: rgb(39, 32, 77);" > <h1><i>Ricotta Meatballs with the Crispy Topping</i></h1>
+                These Ricotta Meatballs are an easy and delicious family favorite! Tender, juicy homemade meatballs with a jar of good marinara and a crispy topping to finish it all off. YUM!
+    <h3> <a href="recipe2.htm">Continue Reading </a></style>  
+            </p>
+        </div>
+    </div><br><br>
+    
+    <div style="display: flex; align-items: center;">
+        <img src="https://th.bing.com/th/id/OIP.aVlPWHkY3dVi37XowwG1RAHaE8?rs=1&pid=ImgDetMain" width="300px" height="300px" alt="Garlic and Black Pepper Beef Skewers">
+        <div class="latesttext" style="margin-left: 20px;">
+            <p > <h1><i> Chicken with Coconut Kale</i></h1>
+                Golden, juicy, thinly sliced pan-fried chicken swims in a creamy coconut-kale gravy-like situation with slips of shallot and a bit of heat. Super easy, minimal ingredients!
+    <h3><a href="recipe3.htm"> Continue Reading</a> </style>  
+            </p>
+        </div>
+    </div><br><br>
+    <div id="recent">
+        VIEW MORE RECENT POSTS
+    </div><br> <br>
+
+    
+
+    <!-- Footer -->
+    <footer style="background-color: #343a40; color: white; padding:12px 20px; text-align: center; border-top: 3px solid #007bff;" id="info">
+        <div style="margin-bottom: 10px;">
+            <h2 style="color: rgba(255, 231, 200, 0.897)">Contact Us</h2>
+            <p>Email: <a href="mailto:info@example.com" style="color: #007bff;">info@example.com</a></p>
+            <p>Phone: <a href="tel:+1234567890" style="color: #007bff;">+1 (234) 567-890</a></p>
+            <p>Address: 123 Main Street, City, Country</p>
+        </div>
+
+        <div style="margin-bottom: 20px;">
+            <h2>Follow Us</h2>
+            <a href="https://www.facebook.com/" target="_blank" style="color: #007bff;">Facebook</a> |
+            <a href="https://www.twitter.com/" target="_blank" style="color: #007bff;">Twitter</a> |
+            <a href="https://www.instagram.com/" target="_blank" style="color: #007bff;">Instagram</a>
+        </div>
+
+        <div style="margin-bottom: 20px;">
+            <p>© 2024 Your Company Name. All Rights Reserved.</p>
+        </div>
+
+        <div>
+            <p style="font-style: italic; color: rgb(255, 168, 168);">Thank you for visiting!</p>
+        </div>
+    </footer>
+
+
+
+</body>
+</html>

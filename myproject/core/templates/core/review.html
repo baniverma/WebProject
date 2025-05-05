@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Form</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}">
+    <script src="{% static 'js/review.js' %}" defer></script> <!-- Link to JS -->
+</head>
+<body>
+    <h2>Submit Your Review</h2>
+    
+    <form method="POST" id="reviewForm">
+        {% csrf_token %}
+        <label>Name:</label>
+        <input type="text" name="name" id="name" required><br>
+        
+        <label>Email:</label>
+        <input type="email" name="email" id="email" required><br>
+        
+        <label>Review Title:</label>
+        <input type="text" name="title" id="title" required><br>
+        
+        <label>Message:</label>
+        <textarea name="message" id="message" required></textarea><br>
+        
+        <label>Rating (1-5):</label>
+        <input type="number" name="rating" id="rating" min="1" max="5" required><br>
+        
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

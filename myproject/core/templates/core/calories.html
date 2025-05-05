@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %} 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Drink Info Search | McCafé</title>
+  <link rel="stylesheet" href="{% static 'css/calories.css' %}">
+</head>
+<body>
+
+<header>
+  <h1>McCafé Drink Info</h1>
+  <input type="text" id="searchInput" placeholder="Search for a drink...">
+  <a href="{% static 'index2.html' %}" class="back-link">← Back to Menu</a> <!-- Optional: depends if it's a static file -->
+</header>
+
+<section id="resultArea">
+  <p class="hint">Type a drink name to see its details.</p>
+</section>
+
+<section id="cart">
+  <p>Your cart is empty.</p>
+</section>
+<button id="checkoutButton">Checkout</button>
+
+<div id="orderSummaryBox" style="display: none;">
+  <div id="orderSummaryContent"></div>
+  <button id="closeOrderSummary">Close</button>
+</div>
+
+<footer>
+  &copy; 2025 McCafé. All rights reserved.
+</footer>
+
+<!-- Corrected JS link -->
+<script src="{% static 'js/calories.js' %}"></script>
+
+</body>
+</html>
